@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <head>
+    <title>Work3</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <h1>Age Calculator</h1>
+    <hr>
+    <div>
+        <label>Name: </label> <input type="text" placeholder="enetr your full name " id="name"><br><br>
+        <label>DOB : </label> <input type="date" placeholder="enter your dob" id="dob"><br><br>
+        <button onclick="check">check</button>
+        <hr>
+        <input type="text" id="result">
+    </div> 
+    <script>
+        function check()
+        {
+            var name = document.getElementById("name").value;
+            var dob = document.getElementById("dob").value;
+            dob = new Date (dob);                                       // converting string dob to date object dob
+            var currentdate = new Date();                               // creatig current date
+            var age = currentdate.getFullYear() - dob.getFullYear();    //caculating age
+
+            var result = document.getElementById("result");
+            result.value = `${name} is ${age} years old`
+            
+        }
+    </script>
+  </body>
+</html>

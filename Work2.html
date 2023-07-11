@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <head>
+    <title>Work2</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <h1> Food list</h1>
+    <hr>
+    <ol>
+        <li>chiken biryani</li>
+        <li>chiken kabab</li>
+        <li>lollipop</li>
+        <li>chilly chiken</li>
+        <li>hyderabad chiken</li>
+    </ol>
+    <br>
+    <input type="text" placeholder="enter the food to add">
+    <br>
+    <br>
+    <button onclick="addfood()"> repalce</button>
+    <script>
+      function addfood ()
+      {
+        var food = document.querySelector("input").value;
+        var list = document.createElement("li");
+        list.append(food)      /// append any node
+        //list.innerText = food
+
+        var ol  = document.querySelector("ol");
+        ol.replaceChild(list, ol.lastElementChild)
+
+        ol.appendchild(list)  //append only element
+
+
+      }
+
+      function deletefood (){
+        var ol = document.querySelector("ol");
+        ol.removeChild()
+      }
+    </script>
+  </body>
+</html>
